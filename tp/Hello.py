@@ -6,9 +6,17 @@ def hello_world():
     return 'Hello World'
 '''
 
-def hello_world():
-    return 'Hello World'
-app.add_url_rule('/', 'hello', hello_world)
+@app.route('/hello/<name>')
+def hello_world(name):
+    return 'Hello %s!' % name
+
+@app.route('/blog/<int:postID>')
+def show_blog(postID):
+    return 'Blog Number %d' % postID
+
+@app.route('/rev/<float:revNo>')
+def revision(revNo):
+    return 'Revision Number %f' % revNo
 
 if __name__=='__main__':
     app.run(debug = True)
