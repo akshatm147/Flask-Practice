@@ -1,3 +1,3 @@
 # Flask-Practice
 
-Various apps that cover ma applications of Flask
+Various apps that cover many applications of Flask (A Python Framework)
